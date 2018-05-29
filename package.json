@@ -11,8 +11,5 @@
       "socketio": "*",
       "express":"*",
       "body-parser":"*"
-    },
-    "devDependencies" : {
-      "my_test_framework": "^3.1.0"
     }
   }

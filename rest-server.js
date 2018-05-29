@@ -55,5 +55,6 @@ io.on('connection', function(socket){
     console.log('a user connected');
 });
 
+console.log("listening on port: ", process.env.PORT))
 http.listen(process.env.PORT)
 // app.listen(port);

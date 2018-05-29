@@ -1,6 +1,12 @@
 {
     "name": "rest-test",
     "version": "0.0.1",
+    "engines":{
+      "node":"v6.9.5"
+    },
+    "scripts": {
+      "start": "node index.js"
+    },
     "dependencies": {
       "socketio": "*",
       "express":"*",

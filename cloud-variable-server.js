@@ -10,11 +10,7 @@ var io = require('socket.io')(http);
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.route('/api/rooms/:room').post(function(req, res){
-    console.log(req.params)
-    console.log(req.body)
-    res.json({message:"success"})
-});
+app.use(express.static("../pxt-microbit/static"))
 
 var namespace_obj = { }
 
@@ -57,6 +53,7 @@ io.on('connection', function(socket){
 
 var port = process.env.PORT || 8001
 
-console.log("listening on port: ", port)
+console.log("socket io listening on port: ", port)
 http.listen(port)
-// app.listen(port);
+console.log("pxt hosted on: ", 80)
+app.listen(80);
